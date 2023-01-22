@@ -335,46 +335,43 @@ header .links ul li:not(:last-child) a {
 /* End Portfolio */
 
 /* Start About */
-
-.About {
+.about {
     padding-top: var(--section-padding);
     padding-bottom: calc(var(--section-padding) + 60px);
-}
-.About-heder {
-    color: #ebeced;
-    font-size: 60px;
-    text-align: center;
-    font-weight: 800;
-    letter-spacing: -3px;
-    margin: 0;
-}
-
-.About-heder + p {
-    margin: -30px 0 0;
-    font-size: 20px;
-    text-align: center;
-    color: #797979;
-}
-
-.About .image {
+  }
+  .about .about-content {
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  @media (max-width: 991px) {
+    .about .about-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+  .about .about-content .image {
     position: relative;
-}
-.About .image img {
-    max-width: 250px;
-}
-
-.About .image::before {
+    width: 250px;
+    height: 375px;
+  }
+  @media (max-width: 991px) {
+    .about .about-content .image {
+      margin: 0 auto 60px;
+    }
+  }
+  .about .about-content .image::before {
     content: "";
-    background-color: var(--section-background);
-    width: 100px;
-    height: calc(100% + 60px);
     position: absolute;
-    top: -30px;
+    background-color: #ebeced;
+    width: 100px;
+    height: calc(100% + 80px);
+    top: -40px;
     left: -20px;
     z-index: -1;
-}
-
-.About .image::after {
+  }
+  .about .about-content .image::after {
     top: -40px;
     content: "";
     position: absolute;
@@ -383,38 +380,35 @@ header .links ul li:not(:last-child) a {
     border-left: 80px solid var(--main-color);
     border-bottom: 80px solid var(--main-color);
     z-index: -1;
-    left: 200px;
-}
-
-.About .text-conterner {
-    margin-top: 100px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.About .text-conterner .text {
+    right: -150px;
+  }
+  @media (max-width: 991px) {
+    .about .about-content .image::before,
+    .about .about-content .image::after {
+      display: none;
+    }
+  }
+  .about .about-content .image img {
+    max-width: 100%;
+  }
+  .about .about-content .text {
     flex-basis: calc(100% - 500px);
-}
-
-.About .text-conterner .text p:first-of-type {
+  }
+  .about .about-content .text p:first-of-type {
     font-weight: bold;
     line-height: 2;
     margin-bottom: 50px;
-}
-
-.About .text-conterner .text hr {
+  }
+  .about .about-content .text hr {
     width: 50%;
-    border-color: var(--main-color);
     display: inline-block;
-}
-
-.About .text-conterner .text p:last-of-type {
+    border-color: var(--main-color);
+  }
+  .about .about-content .text p:last-of-type {
     line-height: 2;
-    margin-bottom: 50px;
     color: #777;
-}
-/* End About */
+  }
+  /* End About */
 /* Start Contact */
 .Contact-heder {
     color: #ebeced;
